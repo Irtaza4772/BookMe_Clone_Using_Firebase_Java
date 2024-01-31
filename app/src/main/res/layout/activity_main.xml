@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        app:cardBackgroundColor="#1E84D5"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:cardCornerRadius="200dp"
+                app:cardBackgroundColor="#E6E3E3"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ivProfile"
+                    />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ali"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:textSize="22dp"
+                android:textColor="#f3f3f3"
+                android:textStyle="bold"
+                android:id="@+id/tvProfile"
+                />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginTop="-20dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        app:cardBackgroundColor="#f3f3f3"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >.
+                <androidx.cardview.widget.CardView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="#f3f3f3"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/bus"
+                        android:id="@+id/ivBus"
+                        />
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="#f3f3f3"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/airlines"
+                        android:id="@+id/ivAirline"
+                        />
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="#f3f3f3"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/train"
+                        android:id="@+id/ivTrain"
+                        />
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >.
+                <androidx.cardview.widget.CardView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="#f3f3f3"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/car"
+                        android:id="@+id/ivCar"
+                        />
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="#f3f3f3"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/event"
+                        android:id="@+id/ivEvent"
+                        />
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="#f3f3f3"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/movies"
+                        android:id="@+id/ivMovies"
+                        />
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            app:cardBackgroundColor="#FFFFFF"
+            android:layout_alignParentBottom="true"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >.
+                <androidx.cardview.widget.CardView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:cardBackgroundColor="#ffff"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="18dp"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/homeblue"
+                        android:id="@+id/ivHome"
+                        />
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:cardBackgroundColor="#ffff"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="18dp"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/booked"
+                        android:id="@+id/ivBooked"
+                        />
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:cardBackgroundColor="#ffff"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="18dp"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/notification"
+                        android:id="@+id/ivNotification"
+                        />
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:cardBackgroundColor="#ffff"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="18dp"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/menu"
+                        android:id="@+id/ivMenu"
+                        />
+
+                </androidx.cardview.widget.CardView>
+
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

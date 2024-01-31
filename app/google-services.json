@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "884925389993",
+    "project_id": "bookme-clone",
+    "storage_bucket": "bookme-clone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:884925389993:android:f6dcd6cefeb962d1bbddb8",
+        "android_client_info": {
+          "package_name": "com.example.bookmeclone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlnrplr7oNrBvouciSpqE6ommJ83felh0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
