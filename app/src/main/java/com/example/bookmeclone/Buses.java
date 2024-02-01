@@ -71,18 +71,6 @@ public class Buses extends AppCompatActivity {
         etBusDate = findViewById(R.id.etBusDate);
         btnSearchBus = findViewById(R.id.btnSearchBus);
 
-       /* FirebaseDatabase.getInstance().getReference().child("Buses").child("bus1").child("From").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Toast.makeText(Buses.this, snapshot.getValue(String.class)+"", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });*/
-
 
         Query query = FirebaseDatabase.getInstance()
                 .getReference()
@@ -93,7 +81,7 @@ public class Buses extends AppCompatActivity {
                         .setQuery(query, Bus.class)
                         .build();
 
-        adapter = new BusAdapter(options);//, this, busDate, busFrom, busTo);
+        adapter = new BusAdapter(options, this);
         rvBus.setAdapter(adapter);
 
     }

@@ -21,25 +21,23 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class BusAdapter extends FirebaseRecyclerAdapter<Bus, BusAdapter.BusViewHolder> {
+public class PlainAdapter extends FirebaseRecyclerAdapter<Plain, PlainAdapter.PlainViewHolder> {
 
     Context parent;
 
+    public PlainAdapter(@NonNull FirebaseRecyclerOptions<Plain> options, Context context) {
+        super(options);
+        parent = context;
 
-    public BusAdapter(@NonNull FirebaseRecyclerOptions<Bus> options, Context context)
-    {   super(options);
     }
 
-
-
     @Override
-    protected void onBindViewHolder(@NonNull BusViewHolder holder, int position, @NonNull Bus model) {
+    protected void onBindViewHolder(@NonNull PlainViewHolder holder, int position, @NonNull Plain model) {
 
 
-            holder.tvName.setText(model.getName());
-            holder.tvDate.setText(model.getDate());
-            holder.tvPrice.setText(model.getPrice());
-
+        holder.tvName.setText(model.getName());
+        holder.tvDate.setText(model.getDate());
+        holder.tvPrice.setText("Rs: " + model.getPrice());
 
         holder.btnBookVehicle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +45,7 @@ public class BusAdapter extends FirebaseRecyclerAdapter<Bus, BusAdapter.BusViewH
                 String itemKey = getRef(position).getKey();
 
                 // Retrieve the data from the source node using the unique key
-                DatabaseReference sourceRef = FirebaseDatabase.getInstance().getReference().child("Buses").child(itemKey);
+                DatabaseReference sourceRef = FirebaseDatabase.getInstance().getReference().child("Plaines").child(itemKey);
                 sourceRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -68,11 +66,11 @@ public class BusAdapter extends FirebaseRecyclerAdapter<Bus, BusAdapter.BusViewH
                                     .addOnFailureListener(new OnFailureListener() {
                                         @Override
                                         public void onFailure(@NonNull Exception e) {
-                                            Toast.makeText(parent, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                            // Handle any errors that occur during the insertion
                                         }
                                     });
-                        }
-                    }
+            }
+        }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
@@ -81,27 +79,26 @@ public class BusAdapter extends FirebaseRecyclerAdapter<Bus, BusAdapter.BusViewH
 
                 });
 
-            }
-        });
-
-
-
     }
+            });
+        }
+
+
 
     @NonNull
     @Override
-    public BusViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public PlainViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.single_vehicle_design, parent, false);
-        return new BusViewHolder(view);
+        return new PlainViewHolder(view);
     }
 
-    public class BusViewHolder extends RecyclerView.ViewHolder
+    public class PlainViewHolder extends RecyclerView.ViewHolder
     {
         TextView tvName, tvDate, tvPrice;
         Button btnBookVehicle;
 
-        public BusViewHolder(@NonNull View itemView) {
+        public PlainViewHolder(@NonNull View itemView) {
             super(itemView);
             tvName = itemView.findViewById(R.id.tvVehicleName);
             tvDate = itemView.findViewById(R.id.tvVehicleDate);
@@ -109,6 +106,4 @@ public class BusAdapter extends FirebaseRecyclerAdapter<Bus, BusAdapter.BusViewH
             btnBookVehicle = itemView.findViewById(R.id.btnBookVehicle);
         }
     }
-
-
 }
